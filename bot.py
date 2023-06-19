@@ -22,8 +22,8 @@ user_data = requests.get(url).json()
 
 
 # using an access token
-g = Github(login_or_token=token)
-
+# g = Github(login_or_token=token)
+g = Github(username, token)
 # login
 g.get_user().login
 
