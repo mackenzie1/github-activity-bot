@@ -7,8 +7,9 @@ from random import randrange
 username = "mackenzie1"
 
 #token in env variables
-token = os.environ.get('GH_TOKEN')
+# token = os.environ.get('GH_TOKEN')
 
+token = os.getenv("GH_TOKEN")
 
 # url to request
 url = f"https://api.github.com/users/{username}"
@@ -34,7 +35,7 @@ print (message)
 
 print( "Username: " + username)
 
-print("All your repos: ")
+# print("All your repos: ")
 
 #print all the repos
 # for repo in user.get_repos():
