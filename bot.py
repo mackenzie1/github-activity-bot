@@ -1,12 +1,8 @@
-from hashlib import sha1, sha512
 import requests
 from pprint import pprint
-import base64
 from github import Github
 import os
-
-message = "Hi Mackenzie"
-print (message)
+from random import randrange
 
 username = "mackenzie1"
 
@@ -20,8 +16,9 @@ url = f"https://api.github.com/users/{username}"
 # make the request and return the json
 user_data = requests.get(url).json()
 
-# # # pretty print JSON data
-pprint(user_data)
+
+# pretty print JSON data
+# pprint(user_data)
 
 
 # using an access token
@@ -32,29 +29,33 @@ g.get_user().login
 
 user = g.get_user()
 
-print(user.name)
+message = "Hi " + user.name + "!"
+print (message)
+
+print( "Username: " + user.name)
+
+print("All your repos: ")
 
 #print all the repos
 for repo in user.get_repos():
     print(repo)
 
-repoName = "mackenzie1/github-activity-bot"
+#repo search
+repoName = username + "/github-activity-bot"
 
 repo = g.get_repo(repoName)
 
 
-print(repo.name)
-
-#get readme contents and print
-contents2 = repo.get_contents("bot.py")
-print(contents2)
+print("Found the correct repo: "+repo.name)
 
 
-contents = repo.get_contents("README.md")
-print(contents)
+randomNumber = str(randrange(100))
 
-repo.create_file("test2.txt", "test", "test", branch="test")
+repo.create_file("test"+randomNumber+".txt", "test"+ randomNumber , "test"+randomNumber, branch="test")
 
 contents = repo.get_contents("test.txt", ref="test")
 
 print(contents)
+
+confirmationMessage = "Congrats!! Your github activity bot has succuessfully run! Check out the test branch on your github-actvivity-bot repo to confirm changes were made. Thanks for the attention (: <3 "
+print(confirmationMessage)
