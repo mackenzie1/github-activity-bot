@@ -26,7 +26,7 @@
 6. Create a branch named test in the cloned repo
 
 
-### Use It!
+### Manually Use It!
 
 1. Navigate to the folder where you cloned the repo
 
@@ -34,7 +34,8 @@
 
 3. Run `.\bot.py`
 
-    
+### Github Actions    
+*I have set up a workflow for the [bot.py](bot.py) script. It is scheduled on a cron job to run once a day. I am unsure if this will transfer over after cloning. If you would like to set up a github actions for this repo to automate the process even more checkout: [pythonbot.yml](.github/workflows/pythonbot.yml)*
 
 ![image](https://github.com/mackenzie1/github-activity-bot/assets/49001843/ed9af5a5-b630-4c77-93b1-f3dc86ee7d59)
 
