@@ -17,6 +17,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+      with:
+        token: '${{ secrets.TOKEN }}'
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
@@ -37,4 +40,4 @@ jobs:
       run: |
         python bot.py
       env:
-       GITHUB_TOKEN: ${{secrets.TOKEN}}
+       GITHUB_TOKEN: '${{secrets.TOKEN}}'
