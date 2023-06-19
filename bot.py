@@ -9,7 +9,7 @@ username = "mackenzie1"
 #token in env variables
 # token = os.environ.get('GH_TOKEN')
 
-token = os.getenv("GH_TOKEN")
+token = os.getenv("TOKEN")
 
 # url to request
 url = f"https://api.github.com/users/{username}"
