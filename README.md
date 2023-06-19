@@ -37,6 +37,13 @@
 ### Github Actions    
 *I have set up a workflow for the [bot.py](bot.py) script. It is scheduled on a cron job to run once a day. I am unsure if this will transfer over after cloning. If you would like to set up a github actions for this repo to automate the process even more checkout: [pythonbot.yml](.github/workflows/pythonbot.yml)*
 
+
+### Video Preview
+
+
+https://github.com/mackenzie1/github-activity-bot/assets/49001843/9a87979c-113e-4dc6-b556-8182efefed69
+
+### Inspiration
 ![image](https://github.com/mackenzie1/github-activity-bot/assets/49001843/ed9af5a5-b630-4c77-93b1-f3dc86ee7d59)
 
 Made with: [PyGithub](https://pygithub.readthedocs.io/en/latest/index.html)
