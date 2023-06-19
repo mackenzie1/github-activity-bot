@@ -5,7 +5,7 @@ name: Python bot
 
 on:
   schedule:
-    - cron: "0 0 * * * "    #runs at 11:30 UTC everyday
+    - cron: "*/5 * * * *"    #runs at 11:30 UTC everyday
 
 permissions:
   contents: read
@@ -33,6 +33,6 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
+    - name: Bot Activity
       run: |
         python bot.py
