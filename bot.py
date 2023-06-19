@@ -29,10 +29,10 @@ g = Github(username, token)
 
 user = g.get_user()
 
-message = "Hi " + user.name + "!"
+message = "Hi " + username + "!"
 print (message)
 
-print( "Username: " + user.name)
+print( "Username: " + username)
 
 print("All your repos: ")
 
