@@ -9,7 +9,7 @@ username = "mackenzie1"
 #token in env variables
 # token = os.environ.get('GH_TOKEN')
 
-token = os.getenv("GH_TOKEN")
+token = os.getenv("TOKEN")
 
 # url to request
 url = f"https://api.github.com/users/{username}"
@@ -17,10 +17,8 @@ url = f"https://api.github.com/users/{username}"
 # make the request and return the json
 user_data = requests.get(url).json()
 
-
 # pretty print JSON data
 # pprint(user_data)
-
 
 # using an access token
 # g = Github(login_or_token=token)
