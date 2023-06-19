@@ -37,8 +37,8 @@ print( "Username: " + username)
 print("All your repos: ")
 
 #print all the repos
-for repo in user.get_repos():
-    print(repo)
+# for repo in user.get_repos():
+#     print(repo)
 
 #repo search
 repoName = username + "/github-activity-bot"
