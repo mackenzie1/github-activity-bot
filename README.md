@@ -35,7 +35,7 @@
 3. Run `.\bot.py`
 
 ### Github Actions    
-*I have set up a workflow for the [bot.py](bot.py) script. It is scheduled on a cron job to run once a day. I am unsure if this will transfer over after cloning. If you would like to set up a github actions for this repo to automate the process even more checkout: [pythonbot.yml](.github/workflows/pythonbot.yml)*
+*I have set up a workflow for the [bot.py](bot.py) script. It is scheduled on a cron job to run once a day. I haven't tested if the workflow will easily integrate after cloning. If you would like to set up a github actions for this repo to automate the process even more checkout: [pythonbot.yml](.github/workflows/pythonbot.yml)*
 
 
 ### Video Preview
