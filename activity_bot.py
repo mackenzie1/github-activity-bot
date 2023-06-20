@@ -17,14 +17,16 @@ url = f"https://api.github.com/users/{username}"
 # make the request and return the json
 user_data = requests.get(url).json()
 
+
 # pretty print JSON data
 # pprint(user_data)
+
 
 # using an access token
 # g = Github(login_or_token=token)
 g = Github(username, token)
 # login
-# g.get_user().login
+g.get_user().login
 
 user = g.get_user()
 
