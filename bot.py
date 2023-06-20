@@ -39,7 +39,7 @@ print( "Username: " + username)
 #     print(repo)
 
 #repo search
-repoName = username + "/github-activity-bot"
+repoName =  "mackenzie1/github-activity-bot"
 
 repo = g.get_repo(repoName)
 
