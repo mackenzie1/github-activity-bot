@@ -27,6 +27,8 @@ g = Github(username, token)
 
 user = g.get_user()
 
+print(user)
+
 message = "Hi " + username + "!"
 print (message)
 
