@@ -6,8 +6,6 @@ from random import randrange
 
 username = "mackenzie1"
 
-#token in env variables
-# token = os.environ.get('GH_TOKEN')
 
 token = os.getenv("TOKEN")
 
@@ -20,10 +18,7 @@ user_data = requests.get(url).json()
 # pretty print JSON data
 # pprint(user_data)
 
-# using an access token
-# g = Github(login_or_token=token)
 g = Github(username, token)
-
 
 user = g.get_user()
 
@@ -32,11 +27,7 @@ print (message)
 
 print( "Username: " + username)
 
-# print("All your repos: ")
 
-#print all the repos
-# for repo in user.get_repos():
-#     print(repo)
 
 #repo search
 repoName =  "mackenzie1/github-activity-bot"
