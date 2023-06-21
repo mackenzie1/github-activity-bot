@@ -9,6 +9,7 @@ username = "mackenzie1"
 
 token = os.getenv("TOKEN")
 
+password = os.getenv("GITHUB_PASSWORD")
 # url to request
 url = f"https://api.github.com/users/{username}"
 
@@ -18,11 +19,17 @@ user_data = requests.get(url).json()
 # pretty print JSON data
 # pprint(user_data)
 
-g = Github(username, token)
+# using an access token
+# g = Github(login_or_token=token)
+g = Github(username, password)
+
+# g = Github(username, token)
 
 user = g.get_user()
 
 print(user)
+
+user.login()
 
 message = "Hi " + username + "!"
 print (message)
