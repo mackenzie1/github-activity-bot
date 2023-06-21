@@ -28,6 +28,8 @@ g = Github(username, password)
 
 user = g.get_user()
 
+print(user)
+
 user.login()
 
 message = "Hi " + username + "!"
