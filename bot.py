@@ -11,7 +11,7 @@ username = "mackenzie1"
 
 token = os.getenv("TOKEN")
 
-password = os.getenv("GITHUB_PASSWORD")
+password = os.getenv("GH_PASSWORD")
 # url to request
 url = f"https://api.github.com/users/{username}"
 
