@@ -23,7 +23,7 @@ user_data = requests.get(url).json()
 
 # using an access token
 # g = Github(login_or_token=token)
-g = Github(token)
+g = Github(username, token)
 
 g.get_user().login
 
@@ -34,10 +34,10 @@ print (message)
 
 # print(user)
 
-user.login()
+# user.login()
 
-message = "Hi " + username + "!"
-print (message)
+# message = "Hi " + username + "!"
+# print (message)
 
 
 # print("All your repos: ")
@@ -59,9 +59,9 @@ randomNumber = str(randrange(100))
 
 repo.create_file("test"+randomNumber+".txt", "test"+ randomNumber , "test"+randomNumber, branch="test")
 
-contents = repo.get_contents("test.txt", ref="test")
+# contents = repo.get_contents("test.txt", ref="test")
 
-print(contents)
+# print(contents)
 
 confirmationMessage = "Congrats!! Your github activity bot has succuessfully run! Check out the test branch on your github-actvivity-bot repo to confirm changes were made."
 print(confirmationMessage)
