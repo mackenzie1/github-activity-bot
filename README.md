@@ -43,7 +43,6 @@
 
 https://github.com/mackenzie1/github-activity-bot/assets/49001843/9a87979c-113e-4dc6-b556-8182efefed69
 
-### Inspiration
-![image](https://github.com/mackenzie1/github-activity-bot/assets/49001843/ed9af5a5-b630-4c77-93b1-f3dc86ee7d59)
+
 
 Made with: [PyGithub](https://pygithub.readthedocs.io/en/latest/index.html)
