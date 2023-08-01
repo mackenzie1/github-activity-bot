@@ -6,6 +6,8 @@ from random import randrange
 
 username = "mackenzie1"
 
+#token in env variables
+# token = os.environ.get('GH_TOKEN')
 
 token = os.getenv("TOKEN")
 
@@ -21,22 +23,28 @@ user_data = requests.get(url).json()
 
 # using an access token
 # g = Github(login_or_token=token)
-g = Github(username, password)
+g = Github(username, token)
 
-# g = Github(username, token)
+g.get_user().login
 
 user = g.get_user()
 
-print(user)
+message = "Hi " + username + "!"
+print (message)
+
+# print(user)
 
 user.login()
 
 message = "Hi " + username + "!"
 print (message)
 
-print( "Username: " + username)
 
+# print("All your repos: ")
 
+#print all the repos
+# for repo in user.get_repos():
+#     print(repo)
 
 #repo search
 repoName =  "mackenzie1/github-activity-bot"
@@ -55,5 +63,5 @@ contents = repo.get_contents("test.txt", ref="test")
 
 print(contents)
 
-confirmationMessage = "Congrats!! Your github activity bot has succuessfully run! Check out the test branch on your github-actvivity-bot repo to confirm changes were made. Thanks for the attention (: <3 "
+confirmationMessage = "Congrats!! Your github activity bot has succuessfully run! Check out the test branch on your github-actvivity-bot repo to confirm changes were made."
 print(confirmationMessage)
