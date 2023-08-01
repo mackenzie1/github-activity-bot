@@ -44,4 +44,4 @@ jobs:
       run: |
         python bot.py
       env:
-       GH_TOKEN: ${{ secrets.TOKEN }}
+       GH_TOKEN: ${{ secrets.token }}
