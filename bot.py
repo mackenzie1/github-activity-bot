@@ -7,41 +7,30 @@ from random import randrange
 username = "mackenzie1"
 
 #token in env variables
-# token = os.environ.get('GH_TOKEN')
-
 token = os.getenv("GH_TOKEN")
 
-password = os.getenv("GH_PASSWORD")
 # url to request
-url = f"https://api.github.com/users/{username}"
+url = f"https://api.github.com/users/{username}/api/v3"
 
 # make the request and return the json
-user_data = requests.get(url).json()
+# user_data = requests.get(url).json()
+
 
 # using an access token
 # g = Github(login_or_token=token)
-g = Github(username, token)
+g = Github(  token)
 
-g.get_user().login
+user = g.get_user("mackenzie1")
+print(user)
 
-user = g.get_user()
+# g.get_user().login
+
+
 
 message = "Hi " + username + "!"
 print (message)
 
-# print(user)
 
-# user.login()
-
-# message = "Hi " + username + "!"
-# print (message)
-
-
-# print("All your repos: ")
-
-#print all the repos
-# for repo in user.get_repos():
-#     print(repo)
 
 #repo search
 repoName =  "mackenzie1/github-activity-bot"
@@ -53,12 +42,17 @@ print("Found the correct repo: "+repo.name)
 
 
 randomNumber = str(randrange(100))
+# print(randomNumber)
 
-repo.create_file("test"+randomNumber+".txt", "test"+ randomNumber , "test"+randomNumber, branch="test")
+contents = repo.get_contents("text.txt")
+print(contents)
+
+# repo.create_file("test"+randomNumber+".txt", "test"+ randomNumber , "test"+randomNumber, branch="test")
+repo.update_file(contents.path, "more tests", "more tests", contents.sha, branch="test")
 
 # contents = repo.get_contents("test.txt", ref="test")
 
-# print(contents)
+print(contents)
 
 confirmationMessage = "Congrats!! Your github activity bot has succuessfully run! Check out the test branch on your github-actvivity-bot repo to confirm changes were made."
 print(confirmationMessage)
