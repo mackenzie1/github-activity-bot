@@ -7,7 +7,7 @@ from random import randrange
 username = "mackenzie1"
 
 #token in env variables
-token = os.getenv("GH_TOKEN")
+token = os.environ.get("GH_TOKEN")
 
 # url to request
 url = f"https://api.github.com/users/{username}/api/v3"
