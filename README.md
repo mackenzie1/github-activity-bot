@@ -46,3 +46,6 @@ https://github.com/mackenzie1/github-activity-bot/assets/49001843/9a87979c-113e-
 
 
 Made with: [PyGithub](https://pygithub.readthedocs.io/en/latest/index.html)
+
+
+[Common Issue](https://stackoverflow.com/questions/68811838/refusing-to-allow-a-personal-access-token-to-create-or-update-workflow)

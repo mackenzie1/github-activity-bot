@@ -47,8 +47,8 @@ randomNumber = str(randrange(100))
 contents = repo.get_contents("text.txt")
 print(contents)
 
-# repo.create_file("test"+randomNumber+".txt", "test"+ randomNumber , "test"+randomNumber, branch="test")
-repo.update_file(contents.path, "more tests", "more tests", contents.sha, branch="test")
+repo.create_file("test"+randomNumber+".txt", "test"+ randomNumber , "test"+randomNumber, branch="test")
+# repo.update_file(contents.path, "more tests", "more tests", contents.sha, branch="test")
 
 # contents = repo.get_contents("test.txt", ref="test")
 
