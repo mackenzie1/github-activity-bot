@@ -18,7 +18,7 @@ url = f"https://api.github.com/users/{username}/api/v3"
 
 # using an access token
 # g = Github(login_or_token=token)
-g = Github(  token)
+g = Github(token)
 
 user = g.get_user("mackenzie1")
 print(user)
@@ -47,12 +47,15 @@ randomNumber = str(randrange(100))
 contents = repo.get_contents("text.txt")
 print(contents)
 
+createFileMessage = "Creating a new file called test with a random number appended "
+print(createFileMessage)
+
 repo.create_file("test"+randomNumber+".txt", "test"+ randomNumber , "test"+randomNumber, branch="test")
 # repo.update_file(contents.path, "more tests", "more tests", contents.sha, branch="test")
 
 # contents = repo.get_contents("test.txt", ref="test")
 
-print(contents)
+# print(contents)
 
 confirmationMessage = "Congrats!! Your github activity bot has succuessfully run! Check out the test branch on your github-actvivity-bot repo to confirm changes were made."
 print(confirmationMessage)
